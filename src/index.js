@@ -2,21 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function Square(props) {
-    /*constructor(props) {
-        super(props);
-        this.state = {
-            value: null
-        }
-    }*/
-    return (
-        <button className="square"
-            onClick={props.onClick}>
-            {props.value}
-        </button>
-    )
-
-}
+import Square from './components/Square';
 
 class Board extends React.Component {
 
@@ -35,7 +21,7 @@ class Board extends React.Component {
             return;
         }
 
-        if (this.state.xIsNext == true) {
+        if (this.state.xIsNext === true) {
             squares[i] = 'X';
         }
         else {
